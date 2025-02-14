@@ -1,9 +1,23 @@
-import React from 'react'
+import React from 'react';
+import "../assets/css/Home.css"
 
 export default function Home() {
   return (
-    <div>
-      <h1>Home</h1>
+    <>
+    <div className="container">
+      <div className="wraper">
+        
+        <div className='home'>
+          <div className='home-item'>
+            <img src="" alt="" />
+
+          </div>
+
+        </div>
+      </div>
+
     </div>
+    
+    </>
   )
 }

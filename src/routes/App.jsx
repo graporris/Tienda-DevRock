@@ -3,19 +3,22 @@ import Home from "../containers/Home";
 import Carrito from "../containers/Carrito";
 import Producto from "../containers/Producto";
 import Layout from "../components/Layout";
+import UsarContexto from "../contexto/UsarContexto";
 
 function App() {
 
     return (
     <>
       <BrowserRouter>
-        <Layout>
-          <Routes>
-            <Route exact path="/" element={<Home/>}></Route>
-            <Route exact path="/carrito" element={<Carrito/>}></Route>
-            <Route exact path="/producto" element={<Producto/>}></Route>
-          </Routes>
-        </Layout>
+        <UsarContexto>
+          <Layout>
+            <Routes>
+              <Route exact path="/" element={<Home/>}></Route>
+              <Route exact path="/carrito" element={<Carrito/>}></Route>
+              <Route exact path="/producto" element={<Producto/>}></Route>
+            </Routes>
+          </Layout>
+        </UsarContexto>
       </BrowserRouter>
     </>
   )

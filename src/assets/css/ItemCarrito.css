@@ -1,6 +1,7 @@
 .carrito-item {
     display: flex;
     justify-content: space-between;
+    padding: 10px;
 }
 
 .carrito-item-img {

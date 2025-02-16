@@ -1,6 +1,7 @@
 import React from 'react';
 import '../assets/css/Item.css';
 import img from '../assets/statics/img1.jpg';
+import Producto from '../containers/Producto';
 
 
 export default function Item() {
@@ -9,7 +10,7 @@ export default function Item() {
     <div className='home-item'>
       <img src={img} alt="" className='home-item-img'/>
       <div className='home-item-info'>
-        <a href="producto.html">
+        <a href='/producto'>
           <h1 className='home-item-titulo'>Pelota</h1>
         </a>
         <p className='home-item-medidas'>Medidas: 10x15</p>

@@ -5,7 +5,7 @@ import iconoVolver from '../assets/statics/back.svg';
 export default function Header() {
   return (
     <> 
-    <a href="carrito.html">
+    <a href="/carrito">
       <img src={iconoCarrito} alt="" className="carritou" />
     </a>
     <a href="">

@@ -1,10 +1,12 @@
-import React from 'react';
+import React , { useContext } from 'react';
 import '../assets/css/Item.css';
 import img from '../assets/statics/img1.jpg';
 import Producto from '../containers/Producto';
-
+import Contexto from '../contexto/Contexto';
 
 export default function Item() {
+  const {agregarCarrito} = useContext(Contexto);
+
   return (
     <>
     <div className='home-item'>
@@ -16,7 +18,9 @@ export default function Item() {
         <p className='home-item-medidas'>Medidas: 10x15</p>
         <div className='home-item-actions'>
           <h3 className='home-item-precio'>AR$ 150</h3>
-          <button className='home-item-comprar'>+</button>
+          <button className='home-item-comprar' onClick={() => {
+            agregarCarrito("soy un item");
+          }}>+</button>
         </div>
       </div>
     </div>

@@ -11,7 +11,8 @@
 }
 
 .home-item-img {
-    width: 70%;
+    height: 100px;
+    margin-bottom: 10px;
 }
 
 .home-item-actions {
@@ -21,7 +22,7 @@
 
 .home-item-titulo {
     margin: 0px;
-    font-size: 20px;
+    font-size: 13px;
 }
 
 .home-item-medidas {
@@ -36,6 +37,7 @@
 
 .home-item-precio {
     margin: 0px;
+    font-size: 20px;
 }
 
 .home-item-comprar {

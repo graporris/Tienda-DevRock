@@ -1,19 +1,21 @@
 import axios from "axios";
 import Contexto from "./Contexto";
-import { useState } from "react";
+import { useReducer } from "react";
+import Reducer from "./Reducer";
 
 export default function UsarContexto(props) {
     const { children } = props;
-    const [estado, setEstado] = useState([]);
 
     const estadoInicial = {
         productos : [],
         carrito: [],
     }
+    const [ state, dispatch ] = useReducer(Reducer, estadoInicial);
+    
     const listameProductos = async () => {
-      const res = await axios.get("https://devrockstore-default-rtdb.firebaseio.com/productos.json")
-      setEstado(res.data);
-      console.log(res.data, "vengo de listame produtos")
+      const res = await axios.get("https://devrockstore-default-rtdb.firebaseio.com/productos.json");
+      dispatch({type: "LISTAME_PRODUCTOS", payload: res.data});
+      console.log(res.data, "vengo de listame produtos");
     };
 
     const agregarCarrito = (item) => {
@@ -23,8 +25,8 @@ export default function UsarContexto(props) {
 
   return (
     <Contexto.Provider value={{
-        productos: estado,
-        //carrito: estadoInicial.carrito,
+        productos: state.productos,
+        carrito : state.carrito,
         listameProductos,
         agregarCarrito,
         eliminarCarrito,

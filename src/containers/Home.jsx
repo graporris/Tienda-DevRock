@@ -17,7 +17,7 @@ export default function Home() {
        <div className="home">
         {
           productos.map((item)=>(
-              <Item {...item}></Item>
+              <Item {...item} key={item.id}></Item>
           ))
         }
       </div>       
